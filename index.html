@@ -15,12 +15,8 @@
         const run = async () => {
             await init();
 
-            document.getElementById('a').onchange = () => {
-                update();
-            }
-            document.getElementById('b').onchange = () => {
-                update();
-            }
+            document.getElementById('a').onchange = update;
+            document.getElementById('b').onchange = update;
         }
 
         run();
