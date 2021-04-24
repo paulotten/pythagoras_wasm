@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>
+        Pythagoras Calculator
+    </title>
+    <script type="module">
+        import init, { solve } from './pkg/pythagoras_wasm.js';
+
+        const update = () => {
+            const a = document.getElementById("a").value;
+            const b = document.getElementById("b").value;
+            document.getElementById("c").value = solve(a, b);
+        }
+
+        const run = async () => {
+            await init();
+
+            document.getElementById('a').onchange = () => {
+                update();
+            }
+            document.getElementById('b').onchange = () => {
+                update();
+            }
+        }
+
+        run();
+    </script>
+</head>
+<body>
+    Pythagoras Calculator<br>
+    <input id="a" type="number" placeholder="a"><br>
+    <input id="b" type="number" placeholder="b"><br>
+    <input id="c" type="number" placeholder="c" disabled>
+</body>
+</html>

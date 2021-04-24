@@ -1,0 +1,15 @@
+{
+  "name": "pythagoras_wasm",
+  "collaborators": [
+    "Paul Otten <potten@my.bcit.ca>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "pythagoras_wasm_bg.wasm",
+    "pythagoras_wasm.js",
+    "pythagoras_wasm.d.ts"
+  ],
+  "module": "pythagoras_wasm.js",
+  "types": "pythagoras_wasm.d.ts",
+  "sideEffects": false
+}
